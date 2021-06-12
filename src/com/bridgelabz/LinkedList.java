@@ -3,7 +3,6 @@ package com.bridgelabz;
 public class LinkedList<T> {
     Node<T> head;
 
-
     /**
      * Appends elements at the end of the list
      *
@@ -57,6 +56,17 @@ public class LinkedList<T> {
         }
     }
 
+    /**
+     * This method pops out the first element
+     */
+    public void popFirst() {
+        if (head == null) {
+            return;
+        } else {
+            Node<T> newHead = head.next;
+            head = newHead;
+        }
+    }
 
     /**
      * This method prints all the elements

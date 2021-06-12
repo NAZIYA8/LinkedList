@@ -5,12 +5,15 @@ public class Runner {
         LinkedList<Integer> numberList = new LinkedList<>();
         numberList.add(56);
         numberList.add(30);
+        numberList.add(40);
         numberList.add(70);
-
         numberList.show();
         System.out.println();
-        int result = numberList.search(30);
-        numberList.add(result + 1, 40);
+        System.out.println("After deleting..");
+        int result = numberList.search(40);
+        numberList.delete(result);
+        int Size = numberList.size();
         numberList.show();
+        System.out.println("The size of the list is " + Size);
     }
 }

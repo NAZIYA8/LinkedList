@@ -107,6 +107,26 @@ public class LinkedList<T> {
     }
 
     /**
+     * This method is used to delete element at particular index
+     *
+     * @param index
+     */
+    public void delete(int index) {
+        if (index == 0) {
+            head = head.next;
+        } else {
+            Node<T> node = head;
+            Node<T> node1 = null;
+            for (int i = 0; i < index - 1; i++) {
+                node = node.next;
+            }
+            node1 = node.next;
+            node.next = node1.next;
+        }
+    }
+
+
+    /**
      * This method prints all the elements
      * Here Traverse till the null and
      * print till the last node's next element is null
@@ -121,5 +141,18 @@ public class LinkedList<T> {
         System.out.println(node.data);
     }
 
-
+    /**
+     * This method is used to find the size of list
+     *
+     * @return count ie.size
+     */
+    public int size() {
+        Node<T> currentNode = head;
+        int count = 0;
+        while (currentNode != null) {
+            currentNode = currentNode.next;
+            count++;
+        }
+        return count;
+    }
 }

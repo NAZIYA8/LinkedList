@@ -10,8 +10,7 @@ public class Runner {
         numberList.show();
         System.out.println();
         System.out.println("After pop");
-        numberList.popFirst();
+        numberList.popLast();
         numberList.show();
-
     }
 }

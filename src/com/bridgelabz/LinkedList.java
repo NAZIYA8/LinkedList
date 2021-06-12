@@ -37,7 +37,7 @@ public class LinkedList<T> {
     /**
      * Used to insert elements at a particular index
      *
-     * @param index
+     * @param index at which you want to insert element
      * @param data  elements passed
      */
     public void add(int index, T data) {
@@ -57,7 +57,7 @@ public class LinkedList<T> {
     }
 
     /**
-     * This method pops out the first element
+     * This method pops the first element
      */
     public void popFirst() {
         if (head == null) {
@@ -66,6 +66,20 @@ public class LinkedList<T> {
             Node<T> newHead = head.next;
             head = newHead;
         }
+    }
+
+    /**
+     * This method pops the last element
+     */
+    public void popLast(){
+        Node<T> previousNode = head;
+        Node<T> currentNode = head;
+
+        while(currentNode.next != null){
+            previousNode= currentNode;
+            currentNode=currentNode.next;
+        }
+        previousNode.next=null;
     }
 
     /**

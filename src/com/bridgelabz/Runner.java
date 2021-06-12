@@ -10,6 +10,7 @@ public class Runner {
         numberList.show();
         System.out.println();
         int result = numberList.search(30);
-        System.out.println("Element present at index  " + result);
+        numberList.add(result + 1, 40);
+        numberList.show();
     }
 }

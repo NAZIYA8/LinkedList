@@ -6,11 +6,10 @@ public class Runner {
         numberList.add(56);
         numberList.add(30);
         numberList.add(70);
-        System.out.println("Before pop");
+
         numberList.show();
         System.out.println();
-        System.out.println("After pop");
-        numberList.popLast();
-        numberList.show();
+        int result = numberList.search(30);
+        System.out.println("Element present at index  " + result);
     }
 }

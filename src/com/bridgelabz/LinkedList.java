@@ -71,15 +71,39 @@ public class LinkedList<T> {
     /**
      * This method pops the last element
      */
-    public void popLast(){
+    public void popLast() {
         Node<T> previousNode = head;
         Node<T> currentNode = head;
 
-        while(currentNode.next != null){
-            previousNode= currentNode;
-            currentNode=currentNode.next;
+        while (currentNode.next != null) {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
         }
-        previousNode.next=null;
+        previousNode.next = null;
+    }
+
+    /**
+     * This method is used to search where the element is present
+     *
+     * @param data the element to be searched.
+     *             i = index
+     * @return Index at which th element is present in the list.
+     */
+    public int search(T data) {
+        Node<T> currentNode = head;
+        int i = 0;
+
+        while (currentNode.next != null) {
+            if (currentNode.data == data) {
+                break;
+            }
+            currentNode = currentNode.next;
+            if (currentNode == null) {
+                return -1;
+            }
+            i++;
+        }
+        return i;
     }
 
     /**
@@ -87,6 +111,7 @@ public class LinkedList<T> {
      * Here Traverse till the null and
      * print till the last node's next element is null
      */
+
     public void show() {
         Node<T> node = head;
         while (node.next != null) {
@@ -95,4 +120,6 @@ public class LinkedList<T> {
         }
         System.out.println(node.data);
     }
+
+
 }

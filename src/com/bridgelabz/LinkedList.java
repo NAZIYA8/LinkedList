@@ -48,6 +48,4 @@ public class LinkedList<T> {
         }
         System.out.println(node.data);
     }
-
-
 }

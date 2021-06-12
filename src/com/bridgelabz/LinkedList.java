@@ -3,6 +3,7 @@ package com.bridgelabz;
 public class LinkedList<T> {
     Node<T> head;
 
+
     /**
      * Appends elements at the end of the list
      *
@@ -23,6 +24,18 @@ public class LinkedList<T> {
     }
 
     /**
+     * Appends elements at the start of list
+     *
+     * @param data elements passed
+     */
+    public void addAtStart(T data) {
+        Node<T> newNode = new Node<>();
+        newNode.data = data;
+        newNode.next = head;
+        head = newNode;
+    }
+
+    /**
      * This method prints all the elements
      * Here Traverse till the null and
      * print till the last node's next element is null
@@ -35,4 +48,6 @@ public class LinkedList<T> {
         }
         System.out.println(node.data);
     }
+
+
 }

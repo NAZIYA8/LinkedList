@@ -9,11 +9,5 @@ public class Runner {
         numberList.add(70);
         numberList.show();
         System.out.println();
-        System.out.println("After deleting..");
-        int result = numberList.search(40);
-        numberList.delete(result);
-        int Size = numberList.size();
-        numberList.show();
-        System.out.println("The size of the list is " + Size);
     }
 }

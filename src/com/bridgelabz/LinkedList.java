@@ -125,6 +125,21 @@ public class LinkedList<T> {
         }
     }
 
+    /**
+     * This method is used to find the size of list
+     *
+     * @return count ie.size
+     */
+    public int size() {
+        Node<T> currentNode = head;
+        int count = 0;
+        while (currentNode != null) {
+            currentNode = currentNode.next;
+            count++;
+        }
+        return count;
+    }
+
 
     /**
      * This method prints all the elements
@@ -139,20 +154,5 @@ public class LinkedList<T> {
             node = node.next;
         }
         System.out.println(node.data);
-    }
-
-    /**
-     * This method is used to find the size of list
-     *
-     * @return count ie.size
-     */
-    public int size() {
-        Node<T> currentNode = head;
-        int count = 0;
-        while (currentNode != null) {
-            currentNode = currentNode.next;
-            count++;
-        }
-        return count;
     }
 }
